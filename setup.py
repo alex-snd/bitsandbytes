@@ -10,7 +10,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
-version = os.getenv("CUDA_VERSION", "cpu")
+version = "cuda102" if os.getenv("CUDA_VERSION") else "cpu"
 
 setup(
     name="bitsandbytes",
